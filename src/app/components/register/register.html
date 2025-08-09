@@ -1,1 +1,28 @@
-<p>register works!</p>
+<div class="d-flex flex-column">
+  <h3 class="mb-4 text-center">Cadastro</h3>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="fullName" placeholder="Nome Completo" formControlName="fullName">
+      <label for="fullName">Nome Completo</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="cpf" placeholder="CPF" formControlName="cpf">
+      <label for="cpf">CPF</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="phone" placeholder="Telefone" formControlName="phone">
+      <label for="phone">Telefone</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="companyName" placeholder="Nome da Empresa" formControlName="companyName">
+      <label for="companyName">Nome da Empresa</label>
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="registerForm.invalid">Registrar</button>
+    <div class="text-center">
+      <a routerLink="/login" class="text-decoration-none d-flex align-items-center justify-content-center">
+        <mat-icon>arrow_back</mat-icon>
+        <span class="ms-1">Já tem uma conta? Faça login</span>
+      </a>
+    </div>
+  </form>
+</div>

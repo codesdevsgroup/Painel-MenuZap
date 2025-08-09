@@ -1,0 +1,31 @@
+.sidenav-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.mat-nav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.collapsed .mat-nav-list a {
+  justify-content: center;
+}
+
+.mat-icon {
+  margin-right: 16px;
+}
+
+.collapsed .mat-icon {
+  margin-right: 0;
+}
+
+.sidenav-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}

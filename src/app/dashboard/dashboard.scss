@@ -22,7 +22,7 @@
 }
 
 .mat-sidenav.collapsed {
-  width: 60px; /* Largura do menu recolhido */
+  width: 60px;
 }
 
 .mat-nav-list a {
@@ -32,7 +32,7 @@
 }
 
 .mat-sidenav.collapsed .mat-nav-list a {
-  justify-content: center; /* Centraliza o ícone horizontalmente */
+  justify-content: center;
 }
 
 .mat-sidenav .mat-icon {
@@ -53,4 +53,10 @@
   width: 100%;
   text-align: center;
   padding: 10px 0;
+}
+
+.sidenav-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
 }

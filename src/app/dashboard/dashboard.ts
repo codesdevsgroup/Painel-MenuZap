@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { SideMenu } from '../components/side-menu/side-menu';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,10 +11,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     RouterOutlet,
     MatSidenavModule,
-    MatListModule,
-    MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    SideMenu
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
