@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [CommonModule, MatListModule, MatIconModule, MatButtonModule],
   templateUrl: './side-menu.html',
-  styleUrl: './side-menu.scss'
+  styleUrl: './side-menu.scss',
 })
 export class SideMenu {
   @Input() isCollapsed = false;

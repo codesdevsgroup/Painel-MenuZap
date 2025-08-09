@@ -1,0 +1,31 @@
+// Usando as variáveis de tema definidas em styles.scss
+
+:host {
+  .form-control {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid #ced4da; // Mantendo uma borda padrão sutil
+
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 0.2rem rgba(227, 6, 19, 0.25); // Sombra com a cor primária
+    }
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .form-floating > label {
+    color: var(--color-text-secondary);
+  }
+
+  a {
+    color: var(--color-accent);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

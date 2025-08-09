@@ -2,11 +2,11 @@
   <h3 class="mb-4 text-center">Login</h3>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="cpfOrEmail" placeholder="CPF ou E-mail" formControlName="cpfOrEmail">
+      <input type="text" class="form-control" id="cpfOrEmail" formControlName="cpfOrEmail">
       <label for="cpfOrEmail">E-mail</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="password" placeholder="Senha" formControlName="password">
+      <input type="password" class="form-control" id="password" formControlName="password">
       <label for="password">Senha</label>
     </div>
     <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="loginForm.invalid">Entrar</button>

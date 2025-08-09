@@ -24,9 +24,106 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
-  --shadow-grid: 3px 0px 6px rgba(0, 0, 0, 0.16);
+  --shadow-grid-start: 5px 0px 15px rgba(0, 0, 0, 0.4);
+  --shadow-grid-end: -5px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================================
+   Variáveis de Tema - Sistema de Pedidos
+   =========================================== */
+
+/* Tema Claro */
+:root {
+  /* Cores da marca */
+  --color-primary: #E30613; /* vermelho da logo */
+  --color-primary-dark: #B5050F;
+  --color-black: #000000;
+
+  /* Cores complementares */
+  --color-accent: #FF7A00; /* laranja apetite */
+  --color-success: #28A745; /* verde confirmação */
+  --color-warning: #FFC107; /* amarelo alerta */
+  --color-danger: #E30613;
+
+  /* Fundo e texto */
+  --color-bg: #F5F5F5; /* fundo claro */
+  --color-surface: #FFFFFF; /* cartões, caixas */
+  --color-text: #222222; /* texto principal */
+  --color-text-secondary: #7A7A7A;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+  --color-primary: #E30613;
+  --color-primary-dark: #B5050F;
+  --color-black: #000000;
+
+  --color-accent: #FF7A00;
+  --color-success: #4CAF50;
+  --color-warning: #FFD54F;
+  --color-danger: #E30613;
+
+  --color-bg: #121212; /* fundo escuro */
+  --color-surface: #1E1E1E; /* cartões escuros */
+  --color-text: #F5F5F5; /* texto principal */
+  --color-text-secondary: #B0B0B0;
+}
+
+/* ===========================================
+   Estilos base usando variáveis
+   =========================================== */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: var(--color-warning);
+  color: #000;
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: #fff;
 }
 
 .shadow-grid {
-  box-shadow: var(--shadow-grid);
+  box-shadow: var(--shadow-grid-start);
 }
