@@ -1,3 +1,45 @@
-<div class="container-fluid">
-  <h1>Bem vindo ao sistema</h1>
-</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" [opened]="true" [class.collapsed]="isCollapsed" class="shadow-grid" [position]="sidenavPosition">
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>storefront</mat-icon>
+        <span *ngIf="!isCollapsed">Gestor de Pedidos</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>store</mat-icon>
+        <span *ngIf="!isCollapsed">Parâmetros/Lojista</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>add_box</mat-icon>
+        <span *ngIf="!isCollapsed">Cadastros</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>assessment</mat-icon>
+        <span *ngIf="!isCollapsed">Relatórios</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>settings</mat-icon>
+        <span *ngIf="!isCollapsed">Configurações</span>
+      </a>
+    </mat-nav-list>
+
+    <div class="sidenav-footer">
+      <button mat-icon-button (click)="toggleSidenavPosition()">
+        <mat-icon>{{ sidenavPosition === 'start' ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>MenuZap</span>
+    </mat-toolbar>
+    <div class="content">
+      <!-- O conteúdo da página virá aqui -->
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

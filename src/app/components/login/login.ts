@@ -13,14 +13,24 @@ export class Login {
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
-      cpfOrEmail: ['', [Validators.required, Validators.email]],
+      cpfOrEmail: ['', [Validators.required]],
       password: ['', Validators.required]
     });
   }
 
   onSubmit() {
+    const { cpfOrEmail, password } = this.loginForm.value;
+
+    if (cpfOrEmail === 'teste' && password === 'teste') {
+      this.router.navigate(['/dashboard']);
+      return;
+    }
+
+    // Adiciona a validação de email apenas se não for o usuário de teste
+    this.loginForm.get('cpfOrEmail')?.setValidators([Validators.required, Validators.email]);
+    this.loginForm.get('cpfOrEmail')?.updateValueAndValidity();
+
     if (this.loginForm.valid) {
-      const { cpfOrEmail, password } = this.loginForm.value;
       if (cpfOrEmail === 'teste@teste.com' && password === '123') {
         this.router.navigate(['/dashboard']);
       } else {
