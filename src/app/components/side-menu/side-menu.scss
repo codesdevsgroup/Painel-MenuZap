@@ -29,3 +29,11 @@
   text-align: center;
   padding: 10px 0;
 }
+
+.side-menu-root, .mat-nav-list, .mat-nav-list a, .mat-nav-list span, .mat-nav-list h3, .sidenav-footer {
+  font-size: 0.85rem;
+}
+
+.mat-nav-list h3 {
+  font-size: 1rem;
+}

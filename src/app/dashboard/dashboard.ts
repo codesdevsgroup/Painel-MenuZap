@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { SideMenu } from '../components/side-menu/side-menu';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
-import { SideMenu } from '../components/side-menu/side-menu';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +12,7 @@ import { SideMenu } from '../components/side-menu/side-menu';
     RouterOutlet,
     MatSidenavModule,
     MatToolbarModule,
-    SideMenu
+    SideMenu,
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
