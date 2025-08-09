@@ -1,3 +1,4 @@
+
 <mat-sidenav-container class="sidenav-container" autosize>
   <mat-sidenav #sidenav mode="side" [opened]="true" [class.collapsed]="isCollapsed" [position]="sidenavPosition">
     <app-side-menu
@@ -9,9 +10,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>MenuZap</span>
-    </mat-toolbar>
+    <app-top-menu></app-top-menu>
     <div class="content">
       <!-- O conteúdo da página virá aqui -->
       <router-outlet></router-outlet>

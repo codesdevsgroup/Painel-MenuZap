@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
+import { TopMenu } from '../components/top-menu/top-menu';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
     MatSidenavModule,
     MatToolbarModule,
     SideMenu,
+    TopMenu,
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
