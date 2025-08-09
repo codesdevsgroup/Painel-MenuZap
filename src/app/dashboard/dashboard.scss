@@ -9,6 +9,18 @@
   border-right: 1px solid #e0e0e0; /* Borda sutil na direita */
 }
 
+.mat-sidenav[align="start"] {
+  box-shadow: var(--shadow-grid);
+  border-right: 1px solid #e0e0e0;
+  border-left: none;
+}
+
+.mat-sidenav[align="end"] {
+  box-shadow: var(--shadow-grid);
+  border-left: 1px solid #e0e0e0;
+  border-right: none;
+}
+
 .mat-sidenav.collapsed {
   width: 60px; /* Largura do menu recolhido */
 }
@@ -29,10 +41,6 @@
 
 .mat-sidenav.collapsed .mat-icon {
   margin-right: 0;
-}
-
-mat-sidenav-content {
-  transition: margin 0.3s ease-in-out;
 }
 
 .content {
