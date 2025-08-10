@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { MenuService } from '../../services/menu.service';
 import { MenuSection } from '../../models/menu-item.interface';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-side-menu',
@@ -33,7 +35,16 @@ export class SideMenu {
 
   menuSections: MenuSection[] = [];
 
-  constructor(private menuService: MenuService) {
+  constructor(
+    private menuService: MenuService,
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
+    // Registrar ícone SVG do WhatsApp
+    iconRegistry.addSvgIcon(
+      'whatsapp',
+      sanitizer.bypassSecurityTrustResourceUrl('/icons/whatsapp.svg')
+    );
     this.menuSections = this.menuService.getMenu();
   }
 

@@ -47,9 +47,18 @@
   font-size: 1em !important;
 }
 
-::ng-deep .mat-sidenav.collapsed .mat-icon {
-  margin-right: 0 !important;
+/* Centralização robusta dos ícones no menu */
+::ng-deep .mat-nav-list .mat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Neutraliza vertical-align global em SVGs dentro de mat-icon */
+::ng-deep .mat-nav-list .mat-icon svg {
+  vertical-align: initial !important;
+}
+
 
 .sidenav-header {
   display: flex;
@@ -105,4 +114,13 @@ mat-nav-list {
 
 ::ng-deep .mat-nav-list .mat-mdc-list-item:last-child {
   margin-bottom: 50px !important;
+}
+
+/* Ajuste de tamanho do ícone apenas para o item do WhatsApp, usando a CSS var do Material */
+::ng-deep a.whatsapp-item {
+  --mat-list-list-item-leading-icon-size: 20px;
+}
+
+::ng-deep a.whatsapp-item .mat-mdc-list-item-icon {
+  font-size: var(--mat-list-list-item-leading-icon-size, 40px) !important;
 }

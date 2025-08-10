@@ -80,6 +80,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.mat-icon svg {
+  vertical-align: -0.125em !important; 
+}
+
 .card {
   background-color: var(--color-surface);
   color: var(--color-text);
@@ -126,4 +130,15 @@ body {
 
 .shadow-grid {
   box-shadow: var(--shadow-grid-start);
+}
+
+/* WhatsApp: subheader com tom oficial e item com ícone em bolha verde */
+.whatsapp-subheader.mdc-list-group__subheader {
+  background-color: #25D366 !important;
+}
+
+a.whatsapp-item mat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -6,12 +6,20 @@
 
 <mat-nav-list>
   <div *ngFor="let section of menuSections">
-    <h3 mat-subheader *ngIf="!isCollapsed && section.title">{{ section.title }}</h3>
+    <h3
+      mat-subheader
+      *ngIf="!isCollapsed && section.title"
+      [ngClass]="{ 'whatsapp-subheader': section.title === 'WHATSAPP' }"
+    >
+      {{ section.title }}
+    </h3>
     
-    <a mat-list-item *ngFor="let item of section.items" [routerLink]="item.route" routerLinkActive="active-link"
-       [matTooltip]="isCollapsed ? item.label : ''"
-       matTooltipPosition="right">
-      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+  <a mat-list-item *ngFor="let item of section.items" [routerLink]="item.route" routerLinkActive="active-link"
+     [matTooltip]="isCollapsed ? item.label : ''"
+     matTooltipPosition="right"
+     [ngClass]="{ 'whatsapp-item': item.route === '/whatsapp' }">
+      <mat-icon *ngIf="item.icon && !item.svgIcon" matListItemIcon>{{ item.icon }}</mat-icon>
+      <mat-icon *ngIf="item.svgIcon" [svgIcon]="item.svgIcon" matListItemIcon></mat-icon>
       <span *ngIf="!isCollapsed">{{ item.label }}</span>
     </a>
     <mat-divider *ngIf="!isCollapsed && menuSections.indexOf(section) < menuSections.length - 1"></mat-divider>

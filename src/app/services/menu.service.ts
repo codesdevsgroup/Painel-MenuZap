@@ -26,7 +26,7 @@ export class MenuService {
     {
       title: 'WHATSAPP',
       items: [
-        { icon: 'whatsapp', label: 'WHATSAPP', route: '/whatsapp' }
+  { svgIcon: 'whatsapp', label: 'WHATSAPP', route: '/whatsapp' }
       ]
     },
     {
