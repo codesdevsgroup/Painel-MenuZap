@@ -72,13 +72,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e53935;
+  background-color: var(--color-primary);
   transition: .4s;
   border-radius: 24px;
 }
 
 .switch input:checked + .slider {
-  background-color: #43a047;
+  background-color: var(--color-subheader-bg);
 }
 
 .slider:before {
@@ -101,17 +101,17 @@
   font-size: 0.95rem;
   font-weight: 500;
   padding-left: 4px;
-  color: #e53935;
+  color: var(--color-primary);
   transition: color 0.3s;
   display: inline-block;
   min-width: 8ch; /* reserva espaço suficiente para 'Fechado' */
   white-space: nowrap;
 }
 .switch-label.open {
-  color: #43a047;
+  color: var(--color-subheader-bg);
 }
 .switch-label.closed {
-  color: #e53935;
+  color: var(--color-primary);
 }
 
 .search-input {
@@ -156,7 +156,7 @@
   position: absolute;
   top: 2px;
   right: 2px;
-  background: var(--color-danger, #e53935);
+  background: var(--color-primary);
   color: #fff;
   border-radius: 50%;
   font-size: 0.75rem;

@@ -94,8 +94,8 @@ mat-nav-list {
 ::ng-deep .mdc-list-group__subheader {
   margin: 0rem 0px !important;
   padding: 5px 0;
-  background-color: #341391;
-  color: white;
+  background-color: var(--color-subheader-bg);
+  color: var(--color-subheader-text);
 }
 
 .h3, h3 {

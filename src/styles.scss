@@ -64,6 +64,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-text: #222222; /* texto principal */
   --color-text-secondary: #7A7A7A;
   --color-divider: #e0e0e0;
+  /* Subheader */
+  --color-subheader-bg: #341391; /* cor atual convertida em variável */
+  --color-subheader-text: #ffffff;
 }
 
 /* Tema Escuro */
@@ -82,6 +85,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-text: #F5F5F5; /* texto principal */
   --color-text-secondary: #B0B0B0;
   --color-divider: #303030;
+  /* Subheader */
+  --color-subheader-bg: #2a0e73; /* tom mais escuro equivalente */
+  --color-subheader-text: #ffffff;
 }
 
 /* ===========================================
