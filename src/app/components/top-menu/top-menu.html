@@ -1,6 +1,31 @@
+
 <div class="top-menu-root">
-  <span class="logo">MenuZap</span>
   <div class="top-menu-actions">
-    <!-- Adicione aqui botões, ícones, perfil, notificações, etc -->
+    <div class="left-actions">
+      <div class="store-switch">
+        <label class="switch">
+          <input type="checkbox" [(ngModel)]="storeOpen" />
+          <span class="slider"></span>
+        </label>
+        <span class="switch-label" [class.open]="storeOpen" [class.closed]="!storeOpen">
+          {{ storeOpen ? 'Aberto' : 'Fechado' }}
+        </span>
+      </div>
+      <input class="search-input" type="text" placeholder="Pesquisar..." />
+    </div>
+    <div class="right-actions">
+      <button class="notification-btn" title="Notificações de venda">
+        <span class="material-icons">shopping_cart_checkout</span>
+        <span class="notification-badge">3</span>
+      </button>
+      <div class="profile-menu">
+        <img class="profile-avatar" src="assets/profile.jpg" alt="Perfil" (click)="toggleDropdown()" />
+        <div class="dropdown-menu" *ngIf="dropdownOpen">
+          <a href="#">Meu Perfil</a>
+          <a href="#">Configurações</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

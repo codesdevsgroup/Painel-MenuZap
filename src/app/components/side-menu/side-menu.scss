@@ -5,6 +5,10 @@
   border-right: 1px solid #e0e0e0; /* Borda sutil na direita */
 }
 
+:host {
+  --mat-list-list-item-one-line-container-height: 40px;
+}
+
 ::ng-deep .mat-sidenav[align="start"] {
   box-shadow: var(--shadow-grid-start);
   border-right: 1px solid #e0e0e0;
@@ -62,12 +66,12 @@
   padding: 4px 0;
 }
 
-.side-menu-root, .mat-nav-list, .mat-nav-list a, .mat-nav-list span, .mat-nav-list h3, .sidenav-footer {
-  font-size: 0.70rem;
+mat-nav-list {
+  margin-top: 26px;
 }
 
-.mat-nav-list h3 {
-  font-size: 1rem !important;
+.side-menu-root, .mat-nav-list, .mat-nav-list a, .mat-nav-list span, .mat-nav-list h3, .sidenav-footer {
+  font-size: 0.70rem;
 }
 
 ::ng-deep .mat-nav-list span {
@@ -85,19 +89,20 @@
   color: white;
 }
 
-@media (min-width: 1200px) {
-  .h3, h3 {
-    font-size: 1rem;
-    padding-left: 14px !important;
-  }
-  .a a {
-    font-size: 0.85rem;
-  }
+.h3, h3 {
+  font-size: 1rem;
+  padding-left: 14px !important;
+}
+.a a {
+  font-size: 0.85rem;
 }
 
 ::ng-deep .mat-mdc-icon-button {
-  width: 32px !important;
-  height: 32px !important;
-  padding: 4px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
   color: var(--color-primary) !important;
+}
+
+::ng-deep .mat-nav-list .mat-mdc-list-item:last-child {
+  margin-bottom: 50px !important;
 }

@@ -39,23 +39,6 @@ export class MenuService {
         { icon: 'people', label: 'CLIENTES', route: '/clientes' },
         { icon: 'two_wheeler', label: 'MOTOBOY/ENTREGADORES', route: '/motoboys' }
       ]
-    },
-    {
-      title: 'RELATÓRIOS',
-      items: [
-        { icon: 'assessment', label: 'RELATÓRIOS', route: '/relatorios' }
-      ]
-    },
-    {
-      title: 'CONFIGURAÇÕES',
-      items: [
-        { icon: 'store', label: 'DADOS DA LOJA', route: '/loja' },
-        { icon: 'group', label: 'USUÁRIOS', route: '/usuarios' },
-        { icon: 'print', label: 'IMPRESSÃO', route: '/impressao' },
-        { icon: 'desktop_windows', label: 'APLICATIVO WINDOWS', route: '/app-windows' },
-        { icon: 'settings', label: 'SISTEMA', route: '/sistema' },
-        { icon: 'qr_code', label: 'QR CODE', route: '/qrcode' }
-      ]
     }
   ];
 
