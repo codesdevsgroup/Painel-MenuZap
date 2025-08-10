@@ -19,7 +19,25 @@
         <span class="notification-badge">3</span>
       </button>
       <div class="profile-menu">
-        <img class="profile-avatar" src="assets/profile.jpg" alt="Perfil" (click)="toggleDropdown()" />
+        <ng-container *ngIf="profileUrl; else profileIcon">
+          <img
+            class="profile-avatar"
+            [src]="profileUrl"
+            alt="Perfil"
+            (error)="onAvatarError()"
+            (click)="toggleDropdown()"
+          />
+        </ng-container>
+        <ng-template #profileIcon>
+          <button
+            type="button"
+            class="profile-avatar profile-avatar--fallback"
+            aria-label="Abrir menu de perfil"
+            (click)="toggleDropdown()"
+          >
+            <span class="material-icons">account_circle</span>
+          </button>
+        </ng-template>
         <div class="dropdown-menu" *ngIf="dropdownOpen">
           <a href="#">Meu Perfil</a>
           <a href="#">Configurações</a>

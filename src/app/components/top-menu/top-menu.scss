@@ -146,8 +146,7 @@
   background: var(--color-danger, #e53935);
   color: #fff;
   border-radius: 50%;
-  font-size: 0.45rem;
-  padding: 1px 3px;
+  font-size: 0.75rem;
   min-width: 16px;
   height: 16px;
   display: flex;
@@ -168,6 +167,21 @@
   cursor: pointer;
   object-fit: cover;
   border: 2px solid var(--color-primary);
+}
+
+.profile-avatar--fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  padding: 0;
+  border: 2px solid var(--color-primary);
+}
+
+.profile-avatar--fallback .material-icons {
+  font-size: 24px;
+  line-height: 1;
 }
 
 .dropdown-menu {

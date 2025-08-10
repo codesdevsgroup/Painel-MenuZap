@@ -12,8 +12,15 @@ import { FormsModule } from '@angular/forms';
 export class TopMenu {
   dropdownOpen = false;
   storeOpen = true;
+  // URL da foto de perfil. Deixe null para mostrar o ícone padrão.
+  profileUrl: string | null = null;
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  onAvatarError() {
+    // Se a imagem falhar ao carregar, faz fallback para o ícone
+    this.profileUrl = null;
   }
 }
