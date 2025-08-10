@@ -1,8 +1,8 @@
 ::ng-deep .mat-sidenav {
   width: 250px; /* Largura do menu expandido */
   transition: width 0.3s ease-in-out;
-  background-color: #f5f5f5; /* Cinza claro */
-  border-right: 1px solid #e0e0e0; /* Borda sutil na direita */
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-divider);
 }
 
 :host {
@@ -11,13 +11,13 @@
 
 ::ng-deep .mat-sidenav[align="start"] {
   box-shadow: var(--shadow-grid-start);
-  border-right: 1px solid #e0e0e0;
+  border-right: 1px solid var(--color-divider);
   border-left: none;
 }
 
 ::ng-deep .mat-sidenav[align="end"] {
   box-shadow: var(--shadow-grid-end);
-  border-left: 1px solid #e0e0e0;
+  border-left: 1px solid var(--color-divider);
   border-right: none;
 }
 
@@ -94,7 +94,7 @@ mat-nav-list {
 ::ng-deep .mdc-list-group__subheader {
   margin: 0rem 0px !important;
   padding: 5px 0;
-  background-color: #221053;
+  background-color: #341391;
   color: white;
 }
 

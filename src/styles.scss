@@ -11,6 +11,19 @@ html {
   ));
 }
 
+/* Angular Material - tema escuro quando data-theme="dark" */
+[data-theme="dark"] {
+  @include mat.theme((
+    color: (
+      primary: mat.$rose-palette,
+      tertiary: mat.$red-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+    theme-type: dark,
+  ));
+}
+
 body {
   color-scheme: light;
   background-color: var(--mat-sys-surface);
@@ -50,6 +63,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-surface: #FFFFFF; /* cartões, caixas */
   --color-text: #222222; /* texto principal */
   --color-text-secondary: #7A7A7A;
+  --color-divider: #e0e0e0;
 }
 
 /* Tema Escuro */
@@ -67,6 +81,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-surface: #1E1E1E; /* cartões escuros */
   --color-text: #F5F5F5; /* texto principal */
   --color-text-secondary: #B0B0B0;
+  --color-divider: #303030;
 }
 
 /* ===========================================
@@ -78,6 +93,10 @@ body {
   color: var(--color-text);
   font-family: 'Segoe UI', Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] body {
+  color-scheme: dark;
 }
 
 .mat-icon svg {

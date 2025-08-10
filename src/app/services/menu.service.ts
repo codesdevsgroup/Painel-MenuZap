@@ -24,9 +24,9 @@ export class MenuService {
       ]
     },
     {
-      title: 'WHATSAPP',
+      title: 'WhatsApp',
       items: [
-  { svgIcon: 'whatsapp', label: 'WHATSAPP', route: '/whatsapp' }
+        { svgIcon: 'whatsapp', label: 'WhatsApp', route: '/whatsapp' }
       ]
     },
     {

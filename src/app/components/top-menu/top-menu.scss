@@ -32,6 +32,19 @@
   margin-left: auto;
 }
 
+.theme-btn {
+  position: relative;
+  background: var(--color-surface);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .store-switch {
   display: flex;
   align-items: center;

@@ -14,6 +14,10 @@
       <input class="search-input" type="text" placeholder="Pesquisar..." />
     </div>
     <div class="right-actions">
+      <button class="theme-btn" title="Alternar tema" (click)="toggleTheme()">
+        <span class="material-icons" *ngIf="theme === 'light'">dark_mode</span>
+        <span class="material-icons" *ngIf="theme === 'dark'">light_mode</span>
+      </button>
       <button class="notification-btn" title="Notificações de venda">
         <span class="material-icons">shopping_cart_checkout</span>
         <span class="notification-badge">3</span>

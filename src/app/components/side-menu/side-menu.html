@@ -9,7 +9,7 @@
     <h3
       mat-subheader
       *ngIf="!isCollapsed && section.title"
-      [ngClass]="{ 'whatsapp-subheader': section.title === 'WHATSAPP' }"
+  [ngClass]="{ 'whatsapp-subheader': section.title.toLowerCase() === 'whatsapp' }"
     >
       {{ section.title }}
     </h3>
@@ -17,7 +17,7 @@
   <a mat-list-item *ngFor="let item of section.items" [routerLink]="item.route" routerLinkActive="active-link"
      [matTooltip]="isCollapsed ? item.label : ''"
      matTooltipPosition="right"
-     [ngClass]="{ 'whatsapp-item': item.route === '/whatsapp' }">
+  [ngClass]="{ 'whatsapp-item': item.route === '/whatsapp' }">
       <mat-icon *ngIf="item.icon && !item.svgIcon" matListItemIcon>{{ item.icon }}</mat-icon>
       <mat-icon *ngIf="item.svgIcon" [svgIcon]="item.svgIcon" matListItemIcon></mat-icon>
       <span *ngIf="!isCollapsed">{{ item.label }}</span>
